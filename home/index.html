@@ -207,10 +207,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-05-28 20:46:00 / 修改时间：21:07:20" itemprop="dateCreated datePublished" datetime="2022-05-28T20:46:00+08:00">2022-05-28</time>
+              <time title="创建时间：2022-05-28 20:46:00" itemprop="dateCreated datePublished" datetime="2022-05-28T20:46:00+08:00">2022-05-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-31 15:52:22" itemprop="dateModified" datetime="2022-05-31T15:52:22+08:00">2022-05-31</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -397,6 +403,119 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://2521zsk.github.io/2022/04/07/hexo01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/IMG_3911(20220510-233210).JPG">
+      <meta itemprop="name" content="小郑">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zsk的Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/07/hexo01/" class="post-title-link" itemprop="url">Hexo next主题主页自定义设置</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-04-07 17:25:00" itemprop="dateCreated datePublished" datetime="2022-04-07T17:25:00+08:00">2022-04-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-31 16:02:46" itemprop="dateModified" datetime="2022-05-31T16:02:46+08:00">2022-05-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/04/07/hexo01/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/04/07/hexo01/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>419</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <hr>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>新建一个page，将这个page指定为启动时的首页</p>
+<h3 id="1-新建page"><a href="#1-新建page" class="headerlink" title="1. 新建page"></a>1. 新建page</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">&quot;home&quot;</span></span><br></pre></td></tr></table></figure>
+<p>此时会在 /myblog/source 文件夹下生成一个 home 文件夹，home 文件夹下会有一个 index.md。</p>
+<h3 id="2-配置-myblog-config-yml"><a href="#2-配置-myblog-config-yml" class="headerlink" title="2. 配置 /myblog/config.yml"></a>2. 配置 /myblog/config.yml</h3><p>在 config.yml 中找到 index_generator，修改其为以下信息：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">index_generator</span>:</span><br><span class="line">  <span class="attr">path</span>: <span class="string">&#x27;/home/&#x27;</span></span><br><span class="line">  <span class="attr">per_page</span>: <span class="number">10</span></span><br><span class="line">  <span class="attr">order_by</span>: -date</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-修改-index-md"><a href="#3-修改-index-md" class="headerlink" title="3. 修改 index.md"></a>3. 修改 index.md</h3><p>打开 home 文件夹下的 index.md ，将其修改为一下信息：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="attr">title</span>: intro</span><br><span class="line"><span class="attr">date</span>: <span class="number">2022</span>-<span class="number">05</span>-<span class="number">05</span> <span class="number">21</span>:<span class="number">39</span>:<span class="number">53</span></span><br><span class="line"><span class="attr">type</span>: <span class="string">&quot;intro&quot;</span></span><br><span class="line"><span class="attr">permalink</span>: index.<span class="property">html</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h5 id="通过上述步骤，即可完成hexo自定义设置首页：-修改-index-md-即可修改主页内容。"><a href="#通过上述步骤，即可完成hexo自定义设置首页：-修改-index-md-即可修改主页内容。" class="headerlink" title="通过上述步骤，即可完成hexo自定义设置首页： 修改 index.md 即可修改主页内容。"></a>通过上述步骤，即可完成hexo自定义设置首页： 修改 index.md 即可修改主页内容。</h5>
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://2521zsk.github.io/2022/04/07/spring01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -483,119 +602,6 @@
 <h3 id="现象原因"><a href="#现象原因" class="headerlink" title="现象原因"></a>现象原因</h3><p>对应的包出现问题，可能是在import时下载失败</p>
 <h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>在路径：本地仓库\org\apache\maven\plugins中删除对应的出错包，回到ideal进行reimport即可解决</p>
 
-      
-    </div>
-
-    
-    
-    
-    <div>
-      
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://2521zsk.github.io/2020/09/07/hexo01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/IMG_3911(20220510-233210).JPG">
-      <meta itemprop="name" content="小郑">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zsk的Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/07/hexo01/" class="post-title-link" itemprop="url">Hexo next主题主页自定义设置</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-09-07 17:25:00" itemprop="dateCreated datePublished" datetime="2020-09-07T17:25:00+08:00">2020-09-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-11 20:12:31" itemprop="dateModified" datetime="2022-05-11T20:12:31+08:00">2022-05-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/09/07/hexo01/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/07/hexo01/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>419</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <hr>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>新建一个page，将这个page指定为启动时的首页</p>
-<h3 id="1-新建page"><a href="#1-新建page" class="headerlink" title="1. 新建page"></a>1. 新建page</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">&quot;home&quot;</span></span><br></pre></td></tr></table></figure>
-<p>此时会在 /myblog/source 文件夹下生成一个 home 文件夹，home 文件夹下会有一个 index.md。</p>
-<h3 id="2-配置-myblog-config-yml"><a href="#2-配置-myblog-config-yml" class="headerlink" title="2. 配置 /myblog/config.yml"></a>2. 配置 /myblog/config.yml</h3><p>在 config.yml 中找到 index_generator，修改其为以下信息：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">index_generator</span>:</span><br><span class="line">  <span class="attr">path</span>: <span class="string">&#x27;/home/&#x27;</span></span><br><span class="line">  <span class="attr">per_page</span>: <span class="number">10</span></span><br><span class="line">  <span class="attr">order_by</span>: -date</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-修改-index-md"><a href="#3-修改-index-md" class="headerlink" title="3. 修改 index.md"></a>3. 修改 index.md</h3><p>打开 home 文件夹下的 index.md ，将其修改为一下信息：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="attr">title</span>: intro</span><br><span class="line"><span class="attr">date</span>: <span class="number">2020</span>-<span class="number">05</span>-<span class="number">05</span> <span class="number">21</span>:<span class="number">39</span>:<span class="number">53</span></span><br><span class="line"><span class="attr">type</span>: <span class="string">&quot;intro&quot;</span></span><br><span class="line"><span class="attr">permalink</span>: index.<span class="property">html</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<h5 id="通过上述步骤，即可完成hexo自定义设置首页：-修改-index-md-即可修改主页内容。"><a href="#通过上述步骤，即可完成hexo自定义设置首页：-修改-index-md-即可修改主页内容。" class="headerlink" title="通过上述步骤，即可完成hexo自定义设置首页： 修改 index.md 即可修改主页内容。"></a>通过上述步骤，即可完成hexo自定义设置首页： 修改 index.md 即可修改主页内容。</h5>
       
     </div>
 

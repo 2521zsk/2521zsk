@@ -21,14 +21,16 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="zsk的Hexo">
-<meta property="og:url" content="https://2521zsk.github.io/archives/2020/index.html">
+<meta property="og:title" content="Categories">
+<meta property="og:url" content="https://2521zsk.github.io/categories/index.html">
 <meta property="og:site_name" content="zsk的Hexo">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-05-31T07:40:02.000Z">
+<meta property="article:modified_time" content="2022-05-31T07:50:52.887Z">
 <meta property="article:author" content="小郑">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://2521zsk.github.io/archives/2020/">
+<link rel="canonical" href="https://2521zsk.github.io/categories/">
 
 
 <script id="page-configurations">
@@ -41,7 +43,8 @@
   };
 </script>
 
-  <title>归档 | zsk的Hexo</title>
+  <title>Categories | zsk的Hexo
+</title>
   
 
 
@@ -177,57 +180,64 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+  
+  
 
-          <div class="content archive">
+          <div class="content page posts-expand">
             
 
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">Categories
+</h1>
+
+<div class="post-meta">
   
-  
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 4 篇日志。 继续努力。</span>
-      </div>
+
+</div>
+
+<script>
+    
+    window.onload = function(){
+        var path = 'https://2521zsk.github.io/'; //这里要改成你博客的地址
+        var localhostItem = String(window.location).split(path)[1];
+        var LiNode = document.querySelectorAll('#menu > li > a')
+        
+        for(var i = 0; i< LiNode.length;i++){
+            var item = String(LiNode[i].href).split(path)[1];
+            if(item == localhostItem && item != undefined){
+                LiNode[i].setAttribute('style','border-bottom:1px solid black');
+            }
+        }
+    };
+
+</script>
+</header>
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-09-07T17:25:00+08:00"
-              content="2020-09-07">
-          09-07
-        </time>
+      
+      
+      <div class="post-body">
+          
       </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/09/07/hexo01/" itemprop="url">
-            <span itemprop="name">Hexo next主题主页自定义设置</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+      
+      
     </div>
-  </div>
-  
-  
-  
+    
 
-  
-
+    
+    
+    
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
